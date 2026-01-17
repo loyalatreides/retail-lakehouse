@@ -34,6 +34,7 @@ The solution demonstrates how raw transactional data can be ingested, validated,
 
 ## 🏛️ High-Level Architecture
 
+```text
 Synthetic Retail Data
         ↓
 Bronze Layer (Raw Delta Tables)
