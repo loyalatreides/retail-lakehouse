@@ -60,7 +60,7 @@ retail-lakehouse/
 ├── data/             # Sample / reference data
 ├── README.md
 └── .gitignore
-
+```text
 ---
 
 ## 🚀 Key Features
