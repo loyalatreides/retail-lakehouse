@@ -46,11 +46,9 @@ Data Quality Gate (Validation Rules)
 Gold Layer (Business Aggregations)
         ↓
 Power BI Dashboards
-
----
-
-## 📂 Repository Structure (Overview)
-
+📂 Repository Structure (Overview)
+text
+Copy code
 retail-lakehouse/
 ├── airflow/          # Dockerized Airflow setup & DAGs
 ├── notebooks/        # Databricks notebooks (Bronze / Silver / Gold)
@@ -60,17 +58,16 @@ retail-lakehouse/
 ├── data/             # Sample / reference data
 ├── README.md
 └── .gitignore
+🚀 Key Features
+Bronze–Silver–Gold Lakehouse architecture
 
----
+External orchestration using Apache Airflow
 
-## 🚀 Key Features
+Explicit Data Quality Gate before Gold layer
 
-- **Bronze–Silver–Gold Lakehouse design**
-- **Automated orchestration** via Airflow
-- **Dedicated Data Quality Gate** blocking bad data
-- **Idempotent, rerunnable pipelines**
-- **Separation of compute, orchestration, and BI**
-- **Enterprise-style repo structure**
+Idempotent, rerunnable pipelines
+
+Power BI–ready analytics datasets
 
 ---
 
