@@ -18,3 +18,5 @@ Thumbs.db
 *.parquet
 *.delta
 *.csv
+
+_local_backup_dags/
