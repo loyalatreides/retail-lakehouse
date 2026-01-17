@@ -51,7 +51,6 @@ Power BI Dashboards
 
 ## 📂 Repository Structure (Overview)
 
-```text
 retail-lakehouse/
 ├── airflow/          # Dockerized Airflow setup & DAGs
 ├── notebooks/        # Databricks notebooks (Bronze / Silver / Gold)
@@ -61,6 +60,7 @@ retail-lakehouse/
 ├── data/             # Sample / reference data
 ├── README.md
 └── .gitignore
+
 ---
 
 ## 🚀 Key Features
