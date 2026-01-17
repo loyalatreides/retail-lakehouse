@@ -34,7 +34,6 @@ The solution demonstrates how raw transactional data can be ingested, validated,
 
 ## 🏛️ High-Level Architecture
 
-```text
 Synthetic Retail Data
         ↓
 Bronze Layer (Raw Delta Tables)
@@ -52,7 +51,6 @@ Power BI Dashboards
 
 ## 📂 Repository Structure (Overview)
 
-```text
 retail-lakehouse/
 ├── airflow/          # Dockerized Airflow setup & DAGs
 ├── notebooks/        # Databricks notebooks (Bronze / Silver / Gold)
