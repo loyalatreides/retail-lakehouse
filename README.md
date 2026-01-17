@@ -34,73 +34,51 @@ The solution demonstrates how raw transactional data can be ingested, validated,
 
 ## 🏛️ High-Level Architecture
 
-┌───────────────────────────┐
-│  Synthetic Retail Data    │
-│  (Generated Transactions) │
-└─────────────┬─────────────┘
-              ↓
-┌───────────────────────────┐
-│  Bronze Layer             │
-│  Raw Delta Tables         │
-│  (Immutable Ingestion)    │
-└─────────────┬─────────────┘
-              ↓
-┌───────────────────────────┐
-│  Silver Layer             │
-│  Cleaned & Validated Data │
-│  (Deduplication, Parsing) │
-└─────────────┬─────────────┘
-              ↓
-┌───────────────────────────┐
-│  Data Quality Gate        │
-│  Validation Rules         │
-│  (Fail / Pass Thresholds) │
-└─────────────┬─────────────┘
-              ↓
-┌───────────────────────────┐
-│  Gold Layer               │
-│  Business Aggregations    │
-│  (BI-Optimized Tables)    │
-└─────────────┬─────────────┘
-              ↓
-┌───────────────────────────┐
-│  Power BI Dashboards      │
-│  Reporting & Insights     │
-└───────────────────────────┘
+```text
+Synthetic Retail Data
+(Generated Transactions)
+        ↓
+Bronze Layer
+Raw Delta Tables
+(Immutable Ingestion)
+        ↓
+Silver Layer
+Cleaned & Validated Data
+(Deduplication, Parsing)
+        ↓
+Data Quality Gate
+Validation Rules
+(Fail / Pass Thresholds)
+        ↓
+Gold Layer
+Business Aggregations
+(BI-Optimized Tables)
+        ↓
+Power BI Dashboards
+Reporting & Insights
+```
 
 ---
 
 ## 📂 Repository Structure (Overview)
 
+```text
 retail-lakehouse/
-│
 ├── airflow/
-│   ├── dags/               → Airflow DAGs (Bronze → Silver → Gold)
-│   ├── Dockerfile          → Airflow image definition
-│   └── docker-compose.yml  → Local Airflow orchestration
-│
+│   ├── dags/               → Airflow DAGs
+│   ├── Dockerfile          → Airflow image
+│   └── docker-compose.yml  → Local orchestration
 ├── notebooks/
-│   ├── bronze/             → Raw ingestion notebooks
-│   ├── silver/             → Cleaning, validation & DQ logic
-│   └── gold/               → Business aggregations
-│
-├── data_generator/
-│   ├── generate_transactions.py
-│   └── generate_dimensions.py
-│
-├── data/
-│   └── sample_data/        → Reference / example datasets
-│
-├── docs/
-│   ├── architecture.md
-│   ├── data_quality.md
-│   └── orchestration.md
-│
-├── powerbi/
-│   └── Visualizations.pbix → Local Power BI dashboards
-│
-├── README.md               → Project documentation
-└── .gitignore              → Ignored files & secrets
+│   ├── bronze/             → Raw ingestion
+│   ├── silver/             → Cleaning & DQ
+│   └── gold/               → Aggregations
+├── data_generator/         → Synthetic data scripts
+├── data/                   → Sample/reference data
+├── docs/                   → Architecture & DQ docs
+├── powerbi/                → Local dashboards
+├── README.md
+└── .gitignore
+```
 
 ---
 
