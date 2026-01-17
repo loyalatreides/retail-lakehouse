@@ -103,8 +103,25 @@ The Gold layer outputs are designed to be directly consumed by **Power BI**, ena
 - Store and product performance
 - Customer-level insights
 - Channel analysis
+---
 
-*(Power BI `.pbix` files are intentionally excluded from version control.)*
+## 📊 Power BI Dashboards
+
+The Gold-layer datasets produced by the lakehouse are consumed directly by **Power BI** to enable business reporting and analytics.
+
+### Dashboard Highlights
+
+#### Overview Dashboard
+![Overview Dashboard](powerbi/screenshots/Executive_Overview.png) 
+
+#### Revenue by Store
+![Revenue by Store](powerbi/screenshots/Product_Performance.png)
+
+#### Product Performance
+![Product Performance](powerbi/screenshots/Store_Performance.png)
+
+> Power BI `.pbix` files are intentionally excluded from version control.  
+> Screenshots are provided for demonstration purposes.
 
 ---
 
