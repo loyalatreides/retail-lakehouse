@@ -148,26 +148,21 @@ cd retail-lakehouse
 
 ### 2️⃣ Configure environment variables (local only)
 Create/update this file:
-
 airflow/.env
 
 Add your Databricks details:
-
-env
-Copy code
-# Databricks workspace host (NO https://)
+#### Databricks workspace host (NO https://)
 DATABRICKS_HOST=adb-████████████████.██.azuredatabricks.net
 
-# Databricks Personal Access Token
+#### Databricks Personal Access Token
 DATABRICKS_TOKEN=████████████████████████████████
 
-# Cluster ID (if your DAG uses an existing cluster)
+#### Cluster ID (if your DAG uses an existing cluster)
 DATABRICKS_CLUSTER_ID=████████████████
 🔒 Security note: .env is intentionally excluded from version control via .gitignore.
 
 ### 3️⃣ Start Airflow (Docker Compose)
 From the repo root:
-
 cd airflow
 docker compose up -d
 Airflow UI will be available at:
