@@ -1,0 +1,20 @@
+# Airflow (local only)
+airflow/.env
+airflow/logs/
+
+# Power BI (local only)
+powerbi/*.pbix
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data outputs (optional)
+*.parquet
+*.delta
+*.csv
